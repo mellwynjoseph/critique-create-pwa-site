@@ -1,0 +1,27 @@
+
+{
+  "name": "C2C Core - Create to Critique Projects and Products",
+  "short_name": "C2C Core",
+  "description": "Empowering businesses through innovative product development and comprehensive project management solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#065f46",
+  "theme_color": "#065f46",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-US"
+}

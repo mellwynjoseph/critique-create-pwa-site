@@ -1,24 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>critique-create-pwa-site</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>C2C Core - Create to Critique Projects and Products</title>
+    <meta name="description" content="Empowering businesses through innovative product development and comprehensive project management solutions. Open-source business applications and professional project services." />
+    <meta name="author" content="C2C Core" />
+    <meta name="keywords" content="business management, project management, software development, real estate, corporate events, wedding planning, C2C Core, Coimbatore" />
 
-    <meta property="og:title" content="critique-create-pwa-site" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://c2ccore.com/" />
+    <meta property="og:title" content="C2C Core - Create to Critique Projects and Products" />
+    <meta property="og:description" content="Empowering businesses through innovative product development and comprehensive project management solutions" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://c2ccore.com/" />
+    <meta property="twitter:title" content="C2C Core - Create to Critique Projects and Products" />
+    <meta property="twitter:description" content="Empowering businesses through innovative product development and comprehensive project management solutions" />
+    <meta property="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#065f46" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="C2C Core" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/icon-192x192.png" type="image/png" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
